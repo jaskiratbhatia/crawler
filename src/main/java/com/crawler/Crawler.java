@@ -80,7 +80,7 @@ public class Crawler {
 				//System.out.println("depth of child = " + depth + " child url is " + n.getData() + " my parent is "
 				//		+ n.getParent().getData());
 				if (n.getStatus() != 200) {
-					System.out.println("omg non 200 status");
+					System.out.println("non 200 status");
 					System.out.println("depth of child = " + depth + " child url is " + n.getData() + " my parent is "
                                                 + n.getParent().getData() + " status = " + n.getStatus());
 				}
@@ -94,6 +94,8 @@ public class Crawler {
 	public static void main(String[] args) {
 		if(args.length < 2) {
 			System.out.println("2 args expected, URL as string with format http://host:port/and DEPTH in integer");
+			System.exit(0);
+
 		}
 		
 		String url = args[0].toString();
